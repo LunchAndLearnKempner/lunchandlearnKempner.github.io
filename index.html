@@ -4,16 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kempner Lunch & Learn</title>
-    <!-- Tailwind CSS CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <!-- Tailwind CSS v3 CDN with custom config -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+      window.tailwind = window.tailwind || {};
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50:'#eef2ff',100:'#e0e7ff',200:'#c7d2fe',300:'#a5b4fc',400:'#818cf8',
+                500:'#6366f1',600:'#4f46e5',700:'#4338ca',800:'#3730a3',900:'#312e81'
+              }
+            },
+            fontFamily: {
+              brand: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="description" content="Kempner Institute Lunch & Learn seminar series: schedule, speakers, and notes."/>
   </head>
-  <body class="bg-gray-50 text-gray-900">
+  <body class="font-brand bg-gray-50 text-gray-900">
     <!-- Header / Hero -->
-    <header class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
+    <header class="bg-gradient-to-br from-brand-600 to-purple-600 text-white">
       <div class="max-w-6xl mx-auto px-6 py-12">
         <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
           Kempner Lunch & Learn
@@ -35,16 +53,11 @@
         <div class="bg-white rounded-2xl shadow p-6 sm:p-8">
           <h2 class="text-2xl font-semibold">About</h2>
           <p class="mt-3 text-gray-700">
-            Short, friendly research talks over lunch. Sessions run during the academic year and summer. Interested in presenting? Email
-            <a class="text-indigo-600 underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a>.
+            Short, friendly research talks over lunch. Sessions run during the academic year and summer. Interested in presenting? 
+            <a class="text-brand-600 underline" href="https://docs.google.com/spreadsheets/d/1YBsN9rFkraL0O7cRIZZJGsboYFvK_jJRmf9HXzmaruU/edit?usp=sharing">Sign up here! </a>.
           </p>
         </div>
       </section>
-
-      <!-- Helper: Session Card component notes
-        To add notes later: replace the href="#" with your URL and remove
-        the classes "pointer-events-none opacity-60" from the Notes button.
-      -->
 
       <!-- ===== FALL 2024 ===== -->
       <section id="fall-2024" class="mb-14">
@@ -56,10 +69,10 @@
           <!-- 09/09/24 -->
           <article class="bg-white rounded-2xl shadow p-6 flex flex-col">
             <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">09/09/24</span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-800">09/09/24</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Minimizing Stress and Maximizing Focus: Deep Work and Organization</h3>
-            <p class="mt-2 text-sm text-gray-700">Ilenna Jones — <a class="text-indigo-600 hover:underline" href="mailto:ijones@g.harvard.edu">ijones@g.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Ilenna Jones — <a class="text-brand-600 hover:underline" href="mailto:ijones@g.harvard.edu">ijones@g.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -68,10 +81,10 @@
           <!-- 09/23/24 -->
           <article class="bg-white rounded-2xl shadow p-6 flex flex-col">
             <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">09/23/24</span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-800">09/23/24</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">The Biological Complexity of Synapses</h3>
-            <p class="mt-2 text-sm text-gray-700">Maceo Richards — <a class="text-indigo-600 hover:underline" href="mailto:mrichards@g.harvard.edu">mrichards@g.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Maceo Richards — <a class="text-brand-600 hover:underline" href="mailto:mrichards@g.harvard.edu">mrichards@g.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -80,10 +93,10 @@
           <!-- 10/07/24 -->
           <article class="bg-white rounded-2xl shadow p-6 flex flex-col">
             <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">10/07/24</span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-800">10/07/24</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Biologically Plausible Models</h3>
-            <p class="mt-2 text-sm text-gray-700">Leilany Torres-Diaz — <a class="text-indigo-600 hover:underline" href="mailto:leilany_torresdiaz@g.harvard.edu">leilany_torresdiaz@g.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Leilany Torres-Diaz — <a class="text-brand-600 hover:underline" href="mailto:leilany_torresdiaz@g.harvard.edu">leilany_torresdiaz@g.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -92,10 +105,10 @@
           <!-- 10/21/24 -->
           <article class="bg-white rounded-2xl shadow p-6 flex flex-col">
             <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">10/21/24</span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-800">10/21/24</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Games and Multi-Agent Systems</h3>
-            <p class="mt-2 text-sm text-gray-700">Aaron Walsman — <a class="text-indigo-600 hover:underline" href="mailto:aaronwalsman@g.harvard.edu">aaronwalsman@g.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Aaron Walsman — <a class="text-brand-600 hover:underline" href="mailto:aaronwalsman@g.harvard.edu">aaronwalsman@g.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -104,10 +117,10 @@
           <!-- 11/04/24 -->
           <article class="bg-white rounded-2xl shadow p-6 flex flex-col">
             <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">11/04/24</span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-800">11/04/24</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Equivariant Neural Networks</h3>
-            <p class="mt-2 text-sm text-gray-700">Emma Finn — <a class="text-indigo-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Emma Finn — <a class="text-brand-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -116,10 +129,10 @@
           <!-- 11/18/24 -->
           <article class="bg-white rounded-2xl shadow p-6 flex flex-col">
             <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">11/18/24</span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-800">11/18/24</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Information Theory</h3>
-            <p class="mt-2 text-sm text-gray-700">George Cai — <a class="text-indigo-600 hover:underline" href="mailto:georgecai@g.harvard.edu">georgecai@g.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">George Cai — <a class="text-brand-600 hover:underline" href="mailto:georgecai@g.harvard.edu">georgecai@g.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -128,10 +141,10 @@
           <!-- 12/02/24 -->
           <article class="bg-white rounded-2xl shadow p-6 flex flex-col">
             <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800">12/02/24</span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 text-brand-800">12/02/24</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Neuromorphic Systems for Machine Learning</h3>
-            <p class="mt-2 text-sm text-gray-700">Jason Yik — <a class="text-indigo-600 hover:underline" href="mailto:jyik@g.harvard.edu">jyik@g.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Jason Yik — <a class="text-brand-600 hover:underline" href="mailto:jyik@g.harvard.edu">jyik@g.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -152,7 +165,7 @@
               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">01/27/25</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Diffusion Models</h3>
-            <p class="mt-2 text-sm text-gray-700">Emma Finn — <a class="text-indigo-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Emma Finn — <a class="text-brand-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -164,24 +177,12 @@
               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">02/10/25</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Test Time Compute</h3>
-            <p class="mt-2 text-sm text-gray-700">Emmanuel Rassou — <a class="text-indigo-600 hover:underline" href="mailto:emmanuel_rassou@college.harvard.edu">emmanuel_rassou@college.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Emmanuel Rassou — <a class="text-brand-600 hover:underline" href="mailto:emmanuel_rassou@college.harvard.edu">emmanuel_rassou@college.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
           </article>
 
-          <!-- 02/24/25 (Open) -->
-          <article class="bg-white rounded-2xl shadow p-6 flex flex-col border-2 border-dashed">
-            <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">02/24/25</span>
-              <span class="text-xs text-yellow-700 font-semibold">Open slot</span>
-            </div>
-            <h3 class="mt-4 text-lg font-semibold">TBD</h3>
-            <p class="mt-2 text-sm text-gray-700">Interested in presenting? Email <a class="text-indigo-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a>.</p>
-            <div class="mt-4 pt-4 border-t">
-              <span class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-500">Notes (n/a)</span>
-            </div>
-          </article>
 
           <!-- 03/11/25 -->
           <article class="bg-white rounded-2xl shadow p-6 flex flex-col">
@@ -189,32 +190,20 @@
               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">03/11/25</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Dendritic Computation</h3>
-            <p class="mt-2 text-sm text-gray-700">Ilenna Jones — <a class="text-indigo-600 hover:underline" href="mailto:ijones@g.harvard.edu">ijones@g.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Ilenna Jones — <a class="text-brand-600 hover:underline" href="mailto:ijones@g.harvard.edu">ijones@g.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
           </article>
 
-          <!-- 03/25/25 (Open) -->
-          <article class="bg-white rounded-2xl shadow p-6 flex flex-col border-2 border-dashed">
-            <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">03/25/25</span>
-              <span class="text-xs text-yellow-700 font-semibold">Open slot</span>
-            </div>
-            <h3 class="mt-4 text-lg font-semibold">TBD</h3>
-            <p class="mt-2 text-sm text-gray-700">Interested in presenting? Email <a class="text-indigo-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a>.</p>
-            <div class="mt-4 pt-4 border-t">
-              <span class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-500">Notes (n/a)</span>
-            </div>
-          </article>
-
+      
           <!-- 04/08/25 -->
           <article class="bg-white rounded-2xl shadow p-6 flex flex-col">
             <div class="flex items-center justify-between">
               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">04/08/25</span>
             </div>
-            <h3 class="mt-4 text-lg font-semibold">TBD</h3>
-            <p class="mt-2 text-sm text-gray-700">Victoria Li — <a class="text-indigo-600 hover:underline" href="mailto:vrli@college.harvard.edu">vrli@college.harvard.edu</a></p>
+            <h3 class="mt-4 text-lg font-semibold">Attention in Transformers</h3>
+            <p class="mt-2 text-sm text-gray-700">Victoria Li — <a class="text-brand-600 hover:underline" href="mailto:vrli@college.harvard.edu">vrli@college.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -226,7 +215,7 @@
               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">04/22/25</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">A primer into second-order optimization</h3>
-            <p class="mt-2 text-sm text-gray-700">Rachit Bansal — <a class="text-indigo-600 hover:underline" href="mailto:rachitbansal@g.harvard.edu">rachitbansal@g.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Rachit Bansal — <a class="text-brand-600 hover:underline" href="mailto:rachitbansal@g.harvard.edu">rachitbansal@g.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -238,7 +227,7 @@
               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">05/13/25</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Zeroth-order optimization</h3>
-            <p class="mt-2 text-sm text-gray-700">Aaron Walsman — <a class="text-indigo-600 hover:underline" href="mailto:aaronwalsman@g.harvard.edu">aaronwalsman@g.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Aaron Walsman — <a class="text-brand-600 hover:underline" href="mailto:aaronwalsman@g.harvard.edu">aaronwalsman@g.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -259,22 +248,9 @@
               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">06/18/25</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Creativity in Diffusion</h3>
-            <p class="mt-2 text-sm text-gray-700">Emma Finn — <a class="text-indigo-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Emma Finn — <a class="text-brand-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
-            </div>
-          </article>
-
-          <!-- 06/25/25 (Open) -->
-          <article class="bg-white rounded-2xl shadow p-6 flex flex-col border-2 border-dashed">
-            <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">06/25/25</span>
-              <span class="text-xs text-yellow-700 font-semibold">Open slot</span>
-            </div>
-            <h3 class="mt-4 text-lg font-semibold">TBD</h3>
-            <p class="mt-2 text-sm text-gray-700">Interested in presenting? Email <a class="text-indigo-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a>.</p>
-            <div class="mt-4 pt-4 border-t">
-              <span class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-500">Notes (n/a)</span>
             </div>
           </article>
 
@@ -284,24 +260,12 @@
               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">07/02/25</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">A Friendly Guide to Random Matrix Theory and Its Application</h3>
-            <p class="mt-2 text-sm text-gray-700">Binxu Wang — <a class="text-indigo-600 hover:underline" href="mailto:binxu_wang@hms.harvard.edu">binxu_wang@hms.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Binxu Wang — <a class="text-brand-600 hover:underline" href="mailto:binxu_wang@hms.harvard.edu">binxu_wang@hms.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
           </article>
 
-          <!-- 07/09/25 (Open) -->
-          <article class="bg-white rounded-2xl shadow p-6 flex flex-col border-2 border-dashed">
-            <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">07/09/25</span>
-              <span class="text-xs text-yellow-700 font-semibold">Open slot</span>
-            </div>
-            <h3 class="mt-4 text-lg font-semibold">TBD</h3>
-            <p class="mt-2 text-sm text-gray-700">Interested in presenting? Email <a class="text-indigo-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a>.</p>
-            <div class="mt-4 pt-4 border-t">
-              <span class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-500">Notes (n/a)</span>
-            </div>
-          </article>
 
           <!-- 07/16/25 -->
           <article class="bg-white rounded-2xl shadow p-6 flex flex-col">
@@ -309,24 +273,12 @@
               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">07/16/25</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">How do humans learn language?</h3>
-            <p class="mt-2 text-sm text-gray-700">Alex Cai — <a class="text-indigo-600 hover:underline" href="mailto:adzcai@g.harvard.edu">adzcai@g.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Alex Cai — <a class="text-brand-600 hover:underline" href="mailto:adzcai@g.harvard.edu">adzcai@g.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
           </article>
 
-          <!-- 07/23/25 (Open) -->
-          <article class="bg-white rounded-2xl shadow p-6 flex flex-col border-2 border-dashed">
-            <div class="flex items-center justify-between">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800">07/23/25</span>
-              <span class="text-xs text-yellow-700 font-semibold">Open slot</span>
-            </div>
-            <h3 class="mt-4 text-lg font-semibold">TBD</h3>
-            <p class="mt-2 text-sm text-gray-700">Interested in presenting? Email <a class="text-indigo-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a>.</p>
-            <div class="mt-4 pt-4 border-t">
-              <span class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-500">Notes (n/a)</span>
-            </div>
-          </article>
 
           <!-- 07/30/25 -->
           <article class="bg-white rounded-2xl shadow p-6 flex flex-col">
@@ -334,7 +286,7 @@
               <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">07/30/25</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">Mesa-Optimisation in Transformers</h3>
-            <p class="mt-2 text-sm text-gray-700">Vincent Song — <a class="text-indigo-600 hover:underline" href="mailto:yidingsong@college.harvard.edu">yidingsong@college.harvard.edu</a></p>
+            <p class="mt-2 text-sm text-gray-700">Vincent Song — <a class="text-brand-600 hover:underline" href="mailto:yidingsong@college.harvard.edu">yidingsong@college.harvard.edu</a></p>
             <div class="mt-4 pt-4 border-t">
               <a href="#" aria-disabled="true" class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-600 pointer-events-none opacity-60">Notes (TBD)</a>
             </div>
@@ -347,7 +299,7 @@
               <span class="text-xs text-yellow-700 font-semibold">Open slot</span>
             </div>
             <h3 class="mt-4 text-lg font-semibold">TBD</h3>
-            <p class="mt-2 text-sm text-gray-700">Interested in presenting? Email <a class="text-indigo-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a>.</p>
+            <p class="mt-2 text-sm text-gray-700">Interested in presenting? Email <a class="text-brand-600 hover:underline" href="mailto:efinn@college.harvard.edu">efinn@college.harvard.edu</a>.</p>
             <div class="mt-4 pt-4 border-t">
               <span class="inline-flex items-center px-3 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-500">Notes (n/a)</span>
             </div>
@@ -357,12 +309,10 @@
 
       <!-- Sign-up CTA -->
       <section class="mb-20">
-        <div class="bg-indigo-50 rounded-2xl border border-indigo-200 p-6 sm:p-8">
-          <h3 class="text-xl font-semibold text-indigo-900">Want to speak?</h3>
-          <p class="mt-2 text-indigo-900/80">We’re filling Spring and Summer slots. Send a 1–2 sentence topic blurb and a preferred date range.</p>
-          <div class="mt-4">
-            <a href="mailto:efinn@college.harvard.edu?subject=Lunch%20%26%20Learn%20Talk%20Proposal" class="inline-flex items-center px-4 py-2 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-700">Email the organizers</a>
-          </div>
+        <div class="bg-brand-50 rounded-2xl border border-brand-200 p-6 sm:p-8">
+          <h3 class="text-xl font-semibold text-brand-900">Want to speak?</h3>
+          <p class="mt-2 text-brand-900/80">We’re filling Fall 2025 Slots. Sign up!</p>
+          <a class="text-brand-600 underline" href="https://docs.google.com/spreadsheets/d/1YBsN9rFkraL0O7cRIZZJGsboYFvK_jJRmf9HXzmaruU/edit?usp=sharing"> Sign up here! </a>.
         </div>
       </section>
     </main>
